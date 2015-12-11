@@ -1,0 +1,17 @@
+<ion-view title="Villes">
+  <div class="bar bar-subheader item-input-inset" ng-class="{'bar-positive': search.length > 0}">
+    <label class="item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" placeholder="Rechercher ..." ng-model="search">
+    </label>
+    <button class="button button-clear" ng-click="search=''">Annuler</button>
+  </div>
+  <ion-content class="has-subheader">
+    <ion-refresher pulling-text="Tirez pour actualiser..." on-refresh="fn.refreshGroups()"></ion-refresher>
+    <div class="list">
+      <a class="item" ng-repeat="city in filteredCities = (data.cities | filter:search) track by city.id" ui-sref="app.listEvents({country: city.country, city: city.city})">
+        <h2>{{city.city}}</h2>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
