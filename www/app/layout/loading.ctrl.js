@@ -8,6 +8,6 @@
       disableAnimate: true,
       disableBack: true
     });
-    $state.go('app.listGroups');
+    $state.go('app.groups');
   }
 })();

@@ -39,11 +39,20 @@
       }
     })
     .state('app.group', {
-      url: '/group/:id',
+      url: '/groups/:groupId',
       views: {
         'menuContent': {
           templateUrl: 'app/meetup/group.html',
           controller: 'GroupCtrl'
+        }
+      }
+    })
+    .state('app.group.event', {
+      url: '/events/:eventId',
+      views: {
+        'menuContent': {
+          templateUrl: 'app/meetup/event.html',
+          controller: 'EventCtrl'
         }
       }
     })

@@ -35,6 +35,12 @@
         return res.data.results;
       });
     }
+    function getEvent(id){
+      return Http.get(_buildUrl('/2/events')+'&event_id='+id).then(function(res){
+        console.log('res', res);
+        return res.data.results;
+      });
+    }
     function _buildUrl(url){
       return baseUrl+url+'?sign=true&key='+apiKey+'&callback=JSON_CALLBACK';
     }

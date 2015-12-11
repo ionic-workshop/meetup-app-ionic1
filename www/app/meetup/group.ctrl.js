@@ -8,8 +8,8 @@
     $scope.data = data;
     $scope.fn = fn;
 
-    console.log('id', $stateParams.id);
-    MeetupApi.getGroup($stateParams.id).then(function(group){
+    console.log('groupId', $stateParams.groupId);
+    MeetupApi.getGroup($stateParams.groupId).then(function(group){
       console.log('group', group);
       data.group = group;
     });
