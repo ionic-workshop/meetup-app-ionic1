@@ -9,7 +9,7 @@
   <ion-content class="has-subheader">
     <ion-refresher pulling-text="Tirez pour actualiser..." on-refresh="fn.refreshGroups()"></ion-refresher>
     <div class="list">
-      <a class="item" ng-repeat="city in filteredCities = (data.cities | filter:search) track by city.id" ui-sref="app.listEvents({country: city.country, city: city.city})">
+      <a class="item" ng-repeat="city in filteredCities = (data.cities | filter:search) track by city.id" ui-sref="app.events({country: city.country, city: city.city})">
         <h2>{{city.city}}</h2>
       </a>
     </div>

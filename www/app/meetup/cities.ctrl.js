@@ -1,25 +1,25 @@
 (function(){
   'use strict';
   angular.module('app')
-    .controller('ListGroupsCtrl', ListGroupsCtrl);
+    .controller('CitiesCtrl', CitiesCtrl);
 
-  function ListGroupsCtrl($scope, MeetupApi){
+  function CitiesCtrl($scope, MeetupApi){
     var data = {}, fn = {};
     $scope.data = data;
     $scope.fn = fn;
 
     $scope.$on('$ionicView.enter', function(){
-      updateGroups();
+      updateCities();
     });
 
-    fn.refreshGroups = function(){
-      updateGroups();
+    fn.refreshCities = function(){
+      updateCities();
     };
 
-    function updateGroups(){
-      MeetupApi.getGroups().then(function(groups){
-        console.log('groups', groups);
-        data.groups = groups;
+    function updateCities(){
+      MeetupApi.getCities().then(function(cities){
+        console.log('cities', cities);
+        data.cities = cities;
         $scope.$broadcast('scroll.refreshComplete');
       }, function(){
         $scope.$broadcast('scroll.refreshComplete');

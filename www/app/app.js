@@ -20,30 +20,39 @@
       controller: 'LayoutCtrl'
     })
 
-    .state('app.listCities', {
-      url: '/listCities',
+    .state('app.cities', {
+      url: '/cities',
       views: {
         'menuContent': {
-          templateUrl: 'app/meetup/listCities.html',
-          controller: 'ListCitiesCtrl'
+          templateUrl: 'app/meetup/cities.html',
+          controller: 'CitiesCtrl'
         }
       }
     })
-    .state('app.listGroups', {
-      url: '/listGroups',
+    .state('app.groups', {
+      url: '/groups',
       views: {
         'menuContent': {
-          templateUrl: 'app/meetup/listGroups.html',
-          controller: 'ListGroupsCtrl'
+          templateUrl: 'app/meetup/groups.html',
+          controller: 'GroupsCtrl'
         }
       }
     })
-    .state('app.listEvents', {
-      url: '/listEvents/:country/:city',
+    .state('app.group', {
+      url: '/group/:id',
       views: {
         'menuContent': {
-          templateUrl: 'app/meetup/listEvents.html',
-          controller: 'ListEventsCtrl'
+          templateUrl: 'app/meetup/group.html',
+          controller: 'GroupCtrl'
+        }
+      }
+    })
+    .state('app.events', {
+      url: '/events/:country/:city',
+      views: {
+        'menuContent': {
+          templateUrl: 'app/meetup/events.html',
+          controller: 'EventsCtrl'
         }
       }
     });

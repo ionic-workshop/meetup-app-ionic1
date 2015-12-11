@@ -9,7 +9,7 @@
   <ion-content class="has-subheader">
     <ion-refresher pulling-text="Tirez pour actualiser..." on-refresh="fn.refreshGroups()"></ion-refresher>
     <div class="list">
-      <a class="item item-avatar" ng-repeat="group in filteredGroups = (data.groups | filter:search) track by group.id">
+      <a class="item item-avatar" ng-repeat="group in filteredGroups = (data.groups | filter:search) track by group.id" ui-sref="app.group({id: group.id})">
         <img ng-src="{{group.group_photo.thumb_link}}">
         <h2>{{group.name}}</h2>
         <p>{{group.next_event.name}} - {{group.organizer.name}} - {{group.city}}</p>

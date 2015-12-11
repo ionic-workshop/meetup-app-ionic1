@@ -1,0 +1,11 @@
+<ion-view title="Groupe">
+  <ion-content>
+    <div class="list card">
+      <a class="item item-thumbnail-left">
+        <img ng-src="{{data.group.group_photo.thumb_link}}">
+        <h2>{{data.group.name}}</h2>
+        <p>{{data.group.next_event.name}} - {{data.group.organizer.name}} - {{data.group.city}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,9 +1,9 @@
 (function(){
   'use strict';
   angular.module('app')
-    .controller('ListEventsCtrl', ListEventsCtrl);
+    .controller('EventsCtrl', EventsCtrl);
 
-  function ListEventsCtrl($stateParams, $scope, MeetupApi){
+  function EventsCtrl($stateParams, $scope, MeetupApi){
     var data = {}, fn = {};
     $scope.data = data;
     $scope.fn = fn;
